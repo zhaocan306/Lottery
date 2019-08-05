@@ -1,0 +1,25 @@
+<view class="cu-modal {{isShow?'show':''}}" catchtouchmove='touchMove' bindtap='hideModal'>
+  <image class='img-dialog' src='/images/bg-lottery2.png'></image>
+  <view class="cu-dialog">
+    <view class='content'>
+      <text class='title'>{{title}}</text>
+      <text class='describe'>{{content}}</text>
+    </view>
+    <view class='detail'>
+      <image class='img-detail' src='/images/bg-lottery3.png'></image>
+      <view class='good'>
+        <view class='img-good'></view>
+        <view class='line'></view>
+        <view class='good-detail'>
+          <text class='good-price'>2<text class='f-28'>元</text></text>
+          <text class='good-name'>维他柠檬茶饮料优惠券</text>
+        </view>
+      </view>
+      <view class='tip'>使用期限：2019-07-9至2019-10-22</view>
+    </view>
+    <view class='footer'>
+      <view class='btn' bindtap='continue'>再抽一次</view>
+      <view class='btn btn-range' bindtap='showRecord'>查看中奖记录</view>
+    </view>
+  </view>
+</view>

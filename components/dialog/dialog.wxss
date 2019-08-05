@@ -1,0 +1,200 @@
+.cu-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1110;
+	opacity: 0;
+	outline: 0;
+	text-align: center;
+	-ms-transform: scale(1.185);
+	transform: scale(1.185);
+	backface-visibility: hidden;
+	perspective: 2000rpx;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+  animation: scales-down 0.2s;
+}
+
+.cu-modal::before {
+	content: "\200B";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.img-dialog {
+  width:100%;
+  height:479rpx;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 99;
+}
+.cu-modal.show {
+	opacity: 1;
+	transition-duration: 0.3s;
+	-ms-transform: scale(1);
+	transform: scale(1);
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: auto;
+  animation: scale-down 0.2s;
+}
+
+.cu-dialog {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width:640rpx;
+  height:657rpx;
+  background:rgba(255,0,48,1);
+  border-radius:22rpx;
+	overflow: hidden;
+}
+.cu-dialog .content {
+  width: 100%;
+  height: 197rpx;
+  text-align: center;
+}
+.cu-dialog .content .title {
+  font-size:36rpx;
+  font-family:PingFang-SC-Bold;
+  font-weight:bold;
+  color:rgba(255,255,255,1);
+  line-height:30rpx;
+  padding-top:53rpx;
+  display:block;
+}
+.cu-dialog .content .describe {
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:30rpx;
+  display: block;
+  padding-top: 25rpx;
+}
+.cu-dialog .detail {
+  width:540rpx;
+  height:227rpx;
+  margin: 0 55rpx;
+  position: relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.cu-dialog .good {
+  width:540rpx;
+  height:124rpx;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 30rpx;
+}
+.cu-dialog .img-good {
+  width:125rpx;
+  height:124rpx;
+  background:rgba(255,255,255,1);
+  border-radius:2rpx;
+  margin-left: 33rpx;
+}
+.cu-dialog .line {
+  width:3rpx;
+  height:115rpx;
+  border-left: 3rpx dashed #A3A3A3;
+  margin-left: 19rpx;
+  margin-right: 17rpx;
+}
+.cu-dialog .good-detail {
+  height: 124rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cu-dialog .good-price {
+  font-size:54rpx;
+  font-family:PingFang-SC-Bold;
+  font-weight:bold;
+  color:rgba(255,0,48,1);
+  line-height:48rpx;
+  text-align:left;
+}
+.cu-dialog .f-28{
+  font-size:28rpx!important;
+}
+.cu-dialog .good-name {
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(255,0,48,1);
+  line-height:30rpx;
+  padding-top:16rpx;
+}
+.cu-dialog .tip {
+  font-size:24rpx;
+  font-family:PingFang-SC-Regular;
+  font-weight:400;
+  color:rgba(61,61,61,1);
+  line-height:30rpx;
+  position: absolute;
+  bottom: 20rpx;
+}
+.cu-dialog .img-detail {
+  width:540rpx;
+  height:227rpx;
+}
+.cu-dialog .footer {
+  width: 100%;
+  height: 86rpx;
+  display: flex;
+  position:absolute;
+  bottom:72rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cu-dialog .footer .btn {
+  width:252rpx;
+  height:72rpx;
+  background:rgba(255,222,0,1);
+  border-radius:36rpx;
+  font-size:28rpx;
+  font-weight:500;
+  color:rgba(98,60,24,1);
+  line-height:30rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.cu-dialog .footer .btn-range {
+  background:rgba(255,0,48,1);
+  border:2rpx solid rgba(255,255,255,1);
+  color: rgba(255,255,255,1);
+  margin-left: 28rpx;
+}
+@keyframes scale-down {
+    0% {
+        opacity: 0;
+        transform: scale(1.8)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+@keyframes scales-down {
+    0% {
+        opacity: 1;
+        transform: scale(1.8)
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1)
+    }
+}

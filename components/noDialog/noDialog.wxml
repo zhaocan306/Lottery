@@ -1,0 +1,14 @@
+<view class="cu-modal {{isShow?'show':''}}" catchtouchmove='touchMove' bindtap='hideModal'>
+  <view class="cu-dialog">
+    <image class='close' src='/images/icon-close.svg' bindtap='hideModal'></image>
+    <view class='content'>
+      <text class='title'>太可惜啦！</text>
+      <text class='title'>这次没有抽到奖品</text>
+      <text class='describe'>不要气馁，还有机会，加油加油！</text>
+    </view>
+    <view class='footer'>
+      <view class='btn' bindtap='continue'>再抽一次</view>
+      <view class='btn btn-range' bindtap='back'>返回首页</view>
+    </view>
+  </view>
+</view>

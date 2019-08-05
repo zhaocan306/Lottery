@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Dialog": "/components/dialog/dialog",
+    "NoDialog": "/components/noDialog/noDialog"
+  }
+}

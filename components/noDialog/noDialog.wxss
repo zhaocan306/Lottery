@@ -1,0 +1,130 @@
+.cu-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1110;
+	opacity: 0;
+	outline: 0;
+	text-align: center;
+	-ms-transform: scale(1.185);
+	transform: scale(1.185);
+	backface-visibility: hidden;
+	perspective: 2000rpx;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+  animation: scale-down 0.15s;
+}
+
+.cu-modal::before {
+	content: "\200B";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.cu-modal.show {
+	opacity: 1;
+	transition-duration: 0.3s;
+	-ms-transform: scale(1);
+	transform: scale(1);
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: auto;
+}
+
+.cu-dialog {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width:610rpx;
+  height:436rpx;
+  background:rgba(255,255,255,1);
+  border-radius:22rpx;
+	overflow: hidden;
+}
+.cu-dialog .content {
+  width: 100%;
+  height: 197rpx;
+  text-align: center;
+  margin-top:70rpx;
+}
+.cu-dialog .close {
+  width: 36rpx;
+  height: 36rpx;
+  position:absolute;
+  right:26rpx;
+  top:21rpx;
+}
+.cu-dialog .content .title {
+  font-size:48rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+  line-height:64rpx;
+  display: block;
+}
+.cu-dialog .content .describe {
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(146,146,146,1);
+  line-height:30rpx;
+  display: block;
+  margin-top: 45rpx;
+}
+.cu-dialog .footer {
+  width: 100%;
+  height: 86rpx;
+  position: absolute;
+  bottom: 56rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cu-dialog .footer .btn {
+  width:240rpx;
+  height:72rpx;
+  background:rgba(255,222,0,1);
+  border-radius:36rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(98,60,24,1);
+  line-height:30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cu-dialog .footer .btn-range {
+  margin-left: 43rpx;
+  background:rgba(255,255,255,1);
+  border:2px solid rgba(255,0,48,1);
+  color:rgba(233,43,45,1);
+}
+@keyframes scale-down {
+    0% {
+        opacity: 0;
+        transform: scale(1.8)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+@keyframes scales-down {
+    0% {
+        opacity: 1;
+        transform: scale(1.8)
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1)
+    }
+}

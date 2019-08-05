@@ -1,0 +1,74 @@
+<view class='lottery'>
+  <image class='img-lottery' src='/images/bg-lottery.png'></image>
+  <image class='img-bang' src='/images/bg-bang.png'></image>
+  <image class='img-lottery1' src='/images/bg-lottery1.png'></image>
+  <!-- 标题 -->
+  <view class='title'>抽奖一次消耗20积分</view>
+  <!-- 转盘 -->
+  <view class='turntable'>
+    <image class='img-turntable' src='/images/bg-turntable.gif'></image>
+    <view class='row-turntable'>
+      <image class="item-turntable" src="{{color[0] == 0.5 ? block : unblock}}"></image>
+      <image class='item-turntable' src="{{color[1] == 0.5 ? block : unblock}}"></image>
+      <image class='item-turntable' src="{{color[2] == 0.5 ? block : unblock}}"></image>
+    </view>
+    <view class='row-turntable'>
+      <view class="item-turntable prize">
+        <image class='img-prize' src='/images/icon-hongbao1.svg'></image>
+        <text class='prize-tip'>2元商品优惠券</text>
+      </view>
+      <view class='item-turntable prize'>
+        <image class='img-prize' src='/images/icon-hongbao1.svg'></image>
+        <text class='prize-tip'>商家红包</text>
+      </view>
+      <view class='item-turntable prize'>谢谢参与</view>
+    </view>
+    <view class='row-turntable top-174'>
+      <image class='item-turntable' src="{{color[7] == 0.5 ? block : unblock}}"></image>
+      <image class='item-turntable' src='/images/bg-click.png'></image>
+      <image class='item-turntable' src="{{color[3] == 0.5 ? block : unblock}}"></image>
+    </view>
+    <view class='row-turntable top-174'>
+      <view class='item-turntable prize'>
+        <image class='img-prize' src='/images/bg-integral.png'></image>
+        <text class='prize-tip'>10积分</text>
+      </view>
+      <view class='item-turntable prize' bindtap='{{clickName}}'></view>
+      <view class='item-turntable prize'>
+        <image class='img-prize' src='/images/bg-integral.png'></image>
+        <text class='prize-tip'>10积分</text>
+      </view>
+    </view>
+    <view class='row-turntable top-348'>
+      <image class='item-turntable' src="{{color[6] == 0.5 ? block : unblock}}"></image>
+      <image class='item-turntable' src="{{color[5] == 0.5 ? block : unblock}}"></image>
+      <image class='item-turntable' src="{{color[4] == 0.5 ? block : unblock}}"></image>
+    </view>
+    <view class='row-turntable top-348'>
+      <view class='item-turntable prize'>
+        <text class='prize-tip'>谢谢参与</text>
+      </view>
+      <view class='item-turntable prize'>
+        <image class='img-prize' src='/images/icon-hongbao1.svg'></image>
+        <text class='prize-tip'>商家红包</text>
+      </view>
+      <view class='item-turntable prize'>
+        <image class='img-prize' src='/images/icon-hongbao1.svg'></image>
+        <text class='prize-tip'>5元商品优惠券</text>
+      </view>
+    </view>
+  </view>
+  <view class='record'>中奖记录</view>
+  <view class='footer'>
+    <view class='footer-title'>活动规则</view>
+    <view class='footer-tip'>
+      <text class='tip'>1：每次抽奖消耗20积分；</text>
+      <text class='tip'>2：获得的优惠券、红包、积分可在“会员中心—优惠券、商家红包、积分”查看使用；</text>
+      <text class='tip'>3：小易店家在法律范围内保留本活动的最终解释权；</text>
+    </view>
+  </view>
+</view>
+<!-- 弹窗 -->
+<Dialog wx:if="{{isWinning}}" isShow="{{isWinning}}" bind:continue="continueWinning" bind:cancel="cancelWinning" bind:showRecord="toRecord"/>
+<!-- 未中奖弹窗 -->
+<NoDialog wx:if="{{isNoWinning}}" isShow="{{isNoWinning}}" bind:continue="continueWinning" bind:cancel="cancelNoWinning" bind:back="toIndex"/>
